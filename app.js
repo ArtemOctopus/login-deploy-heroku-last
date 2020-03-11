@@ -15,11 +15,11 @@ app.use(require('morgan')('dev'))
 app.use(require('cors')())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-app.use(express.static(path.join(__dirname, 'login')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRoutes)
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'login', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 module.exports = app
