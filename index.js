@@ -1,5 +1,5 @@
 const app = require('./app')
-const port = process.env.PORT || 8000
+const port = 'https://testdeployapp1.herokuapp.com/'
 
 app.get('/', (req,res)=>{
     res.status(200).json({
